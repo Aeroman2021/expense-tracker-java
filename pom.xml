@@ -5,7 +5,7 @@
   <artifactId>Expense</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>Expense Maven Webapp</name>
+  <name>model.Expense Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
     <dependency>
@@ -16,7 +16,7 @@
     </dependency>
   </dependencies>
   <build>
-    <finalName>Expense</finalName>
+    <finalName>model.Expense</finalName>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>

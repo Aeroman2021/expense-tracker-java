@@ -1,13 +1,16 @@
+package model;
+
+import core.IdentifiableCSVEntity;
+
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
-public record Expense (
-  int id,
-  String title,
-  BigDecimal amount,
-  LocalDate date,
-  Category category
-) implements Identifiable<Integer> ,IdentifiableCSVEntity<Integer>{
+public record Expense (int id, String title, BigDecimal amount, LocalDate date, Category category)
+        implements IdentifiableCSVEntity<Integer> {
+
+    public enum Category{
+        FOOD, TRANSPORT,ENTERTAINMENT,UTILITIES, OTHER
+    }
     @Override
     public Integer getId() {
         return id;
@@ -29,9 +32,6 @@ public record Expense (
         );
     }
 
-    public enum Category{
-        FOOD, TRANSPORT,ENTERTAINMENT,UTILITIES, OTHER
-    }
 
     @Override
     public String toString() {
